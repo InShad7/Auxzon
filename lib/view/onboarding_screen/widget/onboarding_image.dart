@@ -13,11 +13,11 @@ class OnBoardingImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    log('width:$width');
+    // log('width:$width');
     return Stack(
       children: [
         SizedBox(
-          height: width == 800 ? width / 1 : width / 0.74,
+          height: width >= 800 ? width / 1 : width / 0.74,
           width: width,
           child: Image.asset(
             'assets/images/image-3.jpg',
